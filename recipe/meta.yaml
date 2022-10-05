@@ -21,6 +21,12 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-spatstat.data            # [build_platform != target_platform]
+    - r-deldir                   # [build_platform != target_platform]
+    - r-spatstat.sparse          # [build_platform != target_platform]
+    - r-spatstat.utils           # [build_platform != target_platform]
+    - r-polyclip                 # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ posix }}filesystem        # [win]

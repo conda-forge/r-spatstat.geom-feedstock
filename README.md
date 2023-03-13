@@ -1,11 +1,22 @@
+About r-spatstat.geom-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-spatstat.geom-feedstock/blob/main/LICENSE.txt)
+
 About r-spatstat.geom
-=====================
+---------------------
 
 Home: http://spatstat.org/
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-spatstat.geom-feedstock/blob/main/LICENSE.txt)
+Summary: This is a subset of the original 'spatstat' package, containing the user-level code from 'spatstat' which performs geometrical operations, except for the geometry of linear networks.
+About r-spatstat.geom
+---------------------
+
+Home: http://spatstat.org/
+
+Package license: GPL-2.0-or-later
 
 Summary: This is a subset of the original 'spatstat' package, containing the user-level code from 'spatstat' which performs geometrical operations, except for the geometry of linear networks.
 

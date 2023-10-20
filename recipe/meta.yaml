@@ -1,4 +1,4 @@
-{% set version = "3.2-5" %}
+{% set version = "3.2-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatstat.geom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatstat.geom/spatstat.geom_{{ version }}.tar.gz
-  sha256: bddb539c97f5bd021372b7827b7b246c4e96e9d158edc1009dc15ce711bab48f
+  sha256: be9819b3abde9714629a06bc8d741c7a7f8352fb8f72d92b3156b48f422a688e
 
 build:
   merge_build_host: true  # [win]

@@ -1,6 +1,5 @@
 {% set version = "3.2-9" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-spatstat.geom
@@ -13,8 +12,7 @@ source:
   sha256: a7337166481366ff301c9585636e162d94c8593511a36ae33477966720c9d517
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,7 +26,9 @@ requirements:
     - r-spatstat.utils           # [build_platform != target_platform]
     - r-polyclip                 # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -43,7 +43,6 @@ requirements:
     - r-spatstat.utils >=1.18_0
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-deldir >=0.0_21
     - r-polyclip >=1.10_0
     - r-spatstat.data >=1.6_1

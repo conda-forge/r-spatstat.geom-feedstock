@@ -16,15 +16,19 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-spatstat.data            # [build_platform != target_platform]
     - r-deldir                   # [build_platform != target_platform]
-    - r-spatstat.sparse          # [build_platform != target_platform]
-    - r-spatstat.utils           # [build_platform != target_platform]
     - r-polyclip                 # [build_platform != target_platform]
+    - r-spatstat.data            # [build_platform != target_platform]
+    - r-spatstat.univar          # [build_platform != target_platform]
+    - r-spatstat.utils           # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
@@ -36,18 +40,18 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-deldir >=0.0_21
+    - r-deldir >=1.0_2
     - r-polyclip >=1.10_0
-    - r-spatstat.data >=1.6_1
-    - r-spatstat.sparse
-    - r-spatstat.utils >=1.18_0
+    - r-spatstat.data >=3.1
+    - r-spatstat.univar >=3.0_0
+    - r-spatstat.utils >=3.1_0
   run:
     - r-base
-    - r-deldir >=0.0_21
+    - r-deldir >=1.0_2
     - r-polyclip >=1.10_0
-    - r-spatstat.data >=1.6_1
-    - r-spatstat.sparse
-    - r-spatstat.utils >=1.18_0
+    - r-spatstat.data >=3.1
+    - r-spatstat.univar >=3.0_0
+    - r-spatstat.utils >=3.1_0
 
 test:
   commands:

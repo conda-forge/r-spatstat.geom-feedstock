@@ -13,6 +13,8 @@ Package license: GPL-2.0-or-later
 
 Summary: This is a subset of the original 'spatstat' package, containing the user-level code from 'spatstat' which performs geometrical operations, except for the geometry of linear networks.
 
+Development: https://github.com/spatstat/spatstat.geom
+
 About r-spatstat.geom
 ---------------------
 
@@ -21,6 +23,8 @@ Home: http://spatstat.org/
 Package license: GPL-2.0-or-later
 
 Summary: This is a subset of the original 'spatstat' package, containing the user-level code from 'spatstat' which performs geometrical operations, except for the geometry of linear networks.
+
+Development: https://github.com/spatstat/spatstat.geom
 
 Current build status
 ====================
@@ -252,5 +256,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 

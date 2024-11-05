@@ -1,4 +1,4 @@
-{% set version = "3.2-9" %}
+{% set version = "3.3-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,22 +9,26 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatstat.geom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatstat.geom/spatstat.geom_{{ version }}.tar.gz
-  sha256: a7337166481366ff301c9585636e162d94c8593511a36ae33477966720c9d517
+  sha256: a4ead7bb1f3170983325541fa850506fa2174895a3513590f687856788294683
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
-    - r-spatstat.data            # [build_platform != target_platform]
     - r-deldir                   # [build_platform != target_platform]
-    - r-spatstat.sparse          # [build_platform != target_platform]
-    - r-spatstat.utils           # [build_platform != target_platform]
     - r-polyclip                 # [build_platform != target_platform]
+    - r-spatstat.data            # [build_platform != target_platform]
+    - r-spatstat.univar          # [build_platform != target_platform]
+    - r-spatstat.utils           # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
@@ -36,18 +40,18 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-deldir >=0.0_21
+    - r-deldir >=1.0_2
     - r-polyclip >=1.10_0
-    - r-spatstat.data >=1.6_1
-    - r-spatstat.sparse
-    - r-spatstat.utils >=1.18_0
+    - r-spatstat.data >=3.1
+    - r-spatstat.univar >=3.0_0
+    - r-spatstat.utils >=3.1_0
   run:
     - r-base
-    - r-deldir >=0.0_21
+    - r-deldir >=1.0_2
     - r-polyclip >=1.10_0
-    - r-spatstat.data >=1.6_1
-    - r-spatstat.sparse
-    - r-spatstat.utils >=1.18_0
+    - r-spatstat.data >=3.1
+    - r-spatstat.univar >=3.0_0
+    - r-spatstat.utils >=3.1_0
 
 test:
   commands:

@@ -11,7 +11,9 @@ Home: http://spatstat.org/
 
 Package license: GPL-2.0-or-later
 
-Summary: This is a subset of the original 'spatstat' package, containing the user-level code from 'spatstat' which performs geometrical operations, except for the geometry of linear networks.
+Summary: Defines spatial data types and supports geometrical operations on them. Data types include point patterns, windows (domains), pixel images, line segment patterns, tessellations and hyperframes. Capabilities include creation and manipulation of data (using command line or graphical interaction), plotting, geometrical operations (rotation, shift, rescale, affine transformation), convex hull, discretisation and pixellation, Dirichlet tessellation, Delaunay triangulation, pairwise distances, nearest-neighbour distances, distance transform, morphological operations (erosion, dilation, closing, opening), quadrat counting, geometrical measurement, geometrical covariance, colour maps, calculus on spatial domains, Gaussian blur, level sets of images, transects of images, intersections between objects, minimum distance matching. (Excludes spatial data on a network, which are supported by the package 'spatstat.linnet'.)
+
+Development: https://github.com/spatstat/spatstat.geom
 
 About r-spatstat.geom
 ---------------------
@@ -20,7 +22,9 @@ Home: http://spatstat.org/
 
 Package license: GPL-2.0-or-later
 
-Summary: This is a subset of the original 'spatstat' package, containing the user-level code from 'spatstat' which performs geometrical operations, except for the geometry of linear networks.
+Summary: Defines spatial data types and supports geometrical operations on them. Data types include point patterns, windows (domains), pixel images, line segment patterns, tessellations and hyperframes. Capabilities include creation and manipulation of data (using command line or graphical interaction), plotting, geometrical operations (rotation, shift, rescale, affine transformation), convex hull, discretisation and pixellation, Dirichlet tessellation, Delaunay triangulation, pairwise distances, nearest-neighbour distances, distance transform, morphological operations (erosion, dilation, closing, opening), quadrat counting, geometrical measurement, geometrical covariance, colour maps, calculus on spatial domains, Gaussian blur, level sets of images, transects of images, intersections between objects, minimum distance matching. (Excludes spatial data on a network, which are supported by the package 'spatstat.linnet'.)
+
+Development: https://github.com/spatstat/spatstat.geom
 
 Current build status
 ====================

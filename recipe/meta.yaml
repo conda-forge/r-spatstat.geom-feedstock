@@ -44,14 +44,14 @@ requirements:
     - r-polyclip >=1.10_0
     - r-spatstat.data >=3.1
     - r-spatstat.univar >=3.1_0
-    - r-spatstat.utils >=3.1_1
+    - r-spatstat.utils >=3.1_2
   run:
     - r-base
     - r-deldir >=1.0_2
     - r-polyclip >=1.10_0
     - r-spatstat.data >=3.1
     - r-spatstat.univar >=3.1_0
-    - r-spatstat.utils >=3.1_1
+    - r-spatstat.utils >=3.1_2
 
 test:
   commands:

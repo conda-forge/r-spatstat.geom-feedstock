@@ -1,4 +1,4 @@
-{% set version = "3.7-3" %}
+{% set version = "3.8-1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spatstat.geom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatstat.geom/spatstat.geom_{{ version }}.tar.gz
-  sha256: af3b1ac03638bb3b0a9b9d03e5fba42c97491a0986a757d02c404c45b0ecfcbe
+  sha256: 28a35d56c806aa62035bc4c67767178bc469834d2b8ef21f2317fad2ed7841b3
 
 build:
   number: 0
@@ -43,15 +43,15 @@ requirements:
     - r-deldir >=1.0_2
     - r-polyclip >=1.10
     - r-spatstat.data >=3.1_9
-    - r-spatstat.univar >=3.1_6
-    - r-spatstat.utils >=3.2_2
+    - r-spatstat.univar >=3.2_0
+    - r-spatstat.utils >=3.2_3
   run:
     - r-base
     - r-deldir >=1.0_2
     - r-polyclip >=1.10
     - r-spatstat.data >=3.1_9
-    - r-spatstat.univar >=3.1_6
-    - r-spatstat.utils >=3.2_2
+    - r-spatstat.univar >=3.2_0
+    - r-spatstat.utils >=3.2_3
 
 test:
   commands:

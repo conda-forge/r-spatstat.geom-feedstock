@@ -1,15 +1,15 @@
-{% set version = "3.8-1" %}
+{% set version = "3.8-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-spatstat.geom
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/spatstat.geom_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spatstat.geom/spatstat.geom_{{ version }}.tar.gz
-  sha256: 28a35d56c806aa62035bc4c67767178bc469834d2b8ef21f2317fad2ed7841b3
+  sha256: efe1b8e78e9a448106ad6b9e662b2ff9af2ab2711b6e615323a8ef30ce1d6dfb
 
 build:
   number: 0

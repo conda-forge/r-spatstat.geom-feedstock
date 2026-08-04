@@ -3,7 +3,7 @@
 
 package:
   name: r-spatstat.geom
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
@@ -40,18 +40,18 @@ requirements:
     - {{ posix }}zip             # [win]
   host:
     - r-base
-    - r-deldir >=1.0_2
+    - r-deldir >=2.0_2
     - r-polyclip >=1.10
     - r-spatstat.data >=3.1_9
     - r-spatstat.univar >=3.2_0
-    - r-spatstat.utils >=3.2_3
+    - r-spatstat.utils >=3.2_4
   run:
     - r-base
-    - r-deldir >=1.0_2
+    - r-deldir >=2.0_2
     - r-polyclip >=1.10
     - r-spatstat.data >=3.1_9
     - r-spatstat.univar >=3.2_0
-    - r-spatstat.utils >=3.2_3
+    - r-spatstat.utils >=3.2_4
 
 test:
   commands:
